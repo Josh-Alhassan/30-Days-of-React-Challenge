@@ -4,19 +4,33 @@ import ReactDOM from 'react-dom';
 
 // import App from './App';
 
+const headerStyles = {
+  backgroundColor: '#61DBFB',
+  fontFamily: 'Helvetica Neue',
+  padding: 25,
+  lineHeight: 1.5,
+}
+
 const header = (
-  <header>
-    <h1>Welcome to 30 Days of React</h1>
-    <h2>Getting Started React</h2>
-    <h3>JavaScript Library</h3>
-    <p>Alhassan Joshua</p>
-    <small>Aug 18, 2022</small>
+  <header style={headerStyles}>
+    <div className="header-styles">
+      <h1>Welcome to 30 Days of React</h1>
+      <h2>Getting Started React</h2>
+      <h3>JavaScript Library</h3>
+      <p>Alhassan Joshua</p>
+      <small>Aug 18, 2022</small>
+    </div>
   </header>
 );
 
 // JSX element, main
+const mainStyles = {
+  backgroundColor: '#F3F0F5',
+}
+
+// JSX element, main
 const main = (
-  <main>
+  <main style={mainStyles}>
     <p>Prerequisite to get started react.js:</p>
     <ul>
       <li>HTML</li>
@@ -26,9 +40,13 @@ const main = (
   </main>
 );
 
+const footerStyles = {
+  backgroundColor: '#61DBFB',
+}
+
 // JSX element, footer
 const footer = (
-  <footer>
+  <footer style={footerStyles}>
     <p>Copyright 2020</p>
   </footer>
 );
