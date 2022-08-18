@@ -1,18 +1,21 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import ReactDOM from 'react-dom';
+import './style.css';
 
 // import App from './App';
 
-const headerStyles = {
-  backgroundColor: '#61DBFB',
-  fontFamily: 'Helvetica Neue',
-  padding: 25,
-  lineHeight: 1.5,
-}
+// const headerStyles = {
+//   backgroundColor: '#61DBFB',
+//   fontFamily: 'Helvetica Neue',
+//   padding: 25,
+//   lineHeight: 1.5,
+// }
 
 const header = (
-  <header style={headerStyles}>
+  <header 
+  // style={headerStyles}
+  >
     <div className="header-styles">
       <h1>Welcome to 30 Days of React</h1>
       <h2>Getting Started React</h2>
@@ -24,30 +27,40 @@ const header = (
 );
 
 // JSX element, main
-const mainStyles = {
-  backgroundColor: '#F3F0F5',
-}
+// const mainStyles = {
+//   backgroundColor: '#F3F0F5',
+// }
 
 // JSX element, main
 const main = (
-  <main style={mainStyles}>
-    <p>Prerequisite to get started react.js:</p>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
+  <main 
+    // style={mainStyles}
+  >
+    <div className="main-wrapper">
+      <p>Prerequisite to get started react.js:</p>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+
+    </div>
   </main>
 );
 
-const footerStyles = {
-  backgroundColor: '#61DBFB',
-}
+// const footerStyles = {
+//   backgroundColor: '#61DBFB',
+// }
 
 // JSX element, footer
 const footer = (
-  <footer style={footerStyles}>
-    <p>Copyright 2020</p>
+  <footer 
+    // style={footerStyles}
+  >
+    <div className="footer-wrapper" >
+      <p>Copyright 2020</p>
+
+    </div>
   </footer>
 );
 
