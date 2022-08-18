@@ -5,6 +5,16 @@ import './style.css';
 
 // import App from './App';
 
+// Injecting Data into JSX
+const welcome = 'Welcome to 30 Days Of React'
+const title = 'Getting Started React'
+const subtitle = 'JavaScript Library'
+const author = {
+  firstName: 'Joshua',
+  lastName: 'Alhassan',
+}
+const date = 'Aug 18, 2022'
+
 // const headerStyles = {
 //   backgroundColor: '#61DBFB',
 //   fontFamily: 'Helvetica Neue',
@@ -17,11 +27,11 @@ const header = (
   // style={headerStyles}
   >
     <div className="header-styles">
-      <h1>Welcome to 30 Days of React</h1>
-      <h2>Getting Started React</h2>
-      <h3>JavaScript Library</h3>
-      <p>Alhassan Joshua</p>
-      <small>Aug 18, 2022</small>
+      <h1>{welcome}</h1>
+      <h2>{title}</h2>
+      <h3>{subtitle}</h3>
+      <p>Student: {author.firstName} {author.lastName}</p>
+      <small>{date}</small>
     </div>
   </header>
 );
@@ -31,7 +41,29 @@ const header = (
 //   backgroundColor: '#F3F0F5',
 // }
 
+// Injecting Data into JSX
+const numOne = 3
+const numTwo = 2
+
+const result = (
+  <p>
+    {numOne} + {numTwo} = {numOne + numTwo}
+  </p>
+)
+
+const yearBorn = 1820
+const currentYear = new Date().getFullYear()
+const age = currentYear - yearBorn
+const personAge = (
+  <p>
+    {' '}
+    {author.firstName} {author.lastName} is {age} years old
+  </p>
+)
+
 // JSX element, main
+const techs = ['HTML', 'CSS', 'JavaScript']
+const techsFormatted = techs.map((tech) => <li>{tech}</li>)
 const main = (
   <main 
     // style={mainStyles}
@@ -39,10 +71,10 @@ const main = (
     <div className="main-wrapper">
       <p>Prerequisite to get started react.js:</p>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
+        {techsFormatted}
       </ul>
+      {result}
+      {personAge}
 
     </div>
   </main>
