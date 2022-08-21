@@ -13,42 +13,49 @@ const author = {
   firstName: 'Joshua',
   lastName: 'Alhassan',
 };
-const date = 'Aug 18, 2022';
-
-// Functional Component
-
-// JSX element, header
-// const header = (
-//   <header>
-//     <div className="header-wrapper">
-//       <h1>Welcome to 30 Days of React</h1>
-//       <h2>Getting Started with React</h2>
-//       <h3>JavaScript Library</h3>
-//       <p>Alhassan Joshua</p>
-//       <small>Aug 20, 2022</small>
-//     </div>
-//   </header>
-// );
+const date = 'Aug 20, 2022';
 
 // React component
 // Rendering components
+// Functional Component
 const Header = () => (
   <header>
     <div className="header-wrapper">
-      <h1>Welcome to 30 Days of React</h1>
-      <h2>Getting Started with React</h2>
-      <h3>JavaScript Library</h3>
-      <p>Alhassan Joshua</p>
-      <small>Aug 20, 2022</small>
+      <h1>{welcome}</h1>
+      <h2>{title}</h2>
+      <h3>{subtitle}</h3>
+      <p>
+        Student of React: {author.firstName} {author.lastName}
+      </p>
+      <small>Date: {date}</small>
     </div>
   </header>
 );
+
+const numOne = 3;
+const numTwo = 2;
+
+const result = (
+  <p>
+    {numOne} + {numTwo} = {numOne + numTwo}
+  </p>
+)
+
+const yearBorn = 1998;
+const currentYear = 2022;
+const age = currentYear - yearBorn;
+const personAge = (
+  <p>
+    {' '}
+    {author.firstName} {author.lastName} is {age} years old
+  </p>
+)
 
 // User Card Component - Implicit return
 const UserCard = () => (
   <div className='user-card'>
     <img src="https://drive.google.com/file/d/1ou4MaaVbTfNUWEiXvB_7ji_2EIMvySJ-/view?usp=sharing" alt="Photo of Joshua" />
-    <h2>Joshua Alhassan</h2>
+    <h2>{author.firstName} {author.lastName}</h2>
   </div>
 )
 
@@ -63,7 +70,12 @@ const TechList = () => {
 const Main = () => (
   <main>
     <div className="main-wrapper">
-      <p>Prerequisite to get started react.js</p>
+      <p>Prerequisite to get started {' '}
+        <strong>
+          <em> react.js </em>
+        </strong>
+        :
+      </p>
       <ul>
         <TechList />
       </ul>
