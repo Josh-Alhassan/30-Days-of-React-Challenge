@@ -3,104 +3,37 @@ import { createRoot } from 'react-dom/client';
 import ReactDOM from 'react-dom';
 import './style.css';
 
-// import App from './App';
-
-// Injecting Data into JSX
-const welcome = 'Welcome to 30 Days Of React';
-const title = 'Getting Started React';
-const subtitle = 'JavaScript Library';
-const author = {
-  firstName: 'Joshua',
-  lastName: 'Alhassan',
+// Button Component
+const buttonStyles = {
+  padding: '10px 20px',
+  background: 'rgb(0, 255, 0)',
+  border: 'none',
+  borderRadius: 5,
 };
-const date = 'Aug 20, 2022';
 
-// React component
-// Rendering components
-// Functional Component
-const Header = () => (
-  <header>
-    <div className="header-wrapper">
-      <h1>{welcome}</h1>
-      <h2>{title}</h2>
-      <h3>{subtitle}</h3>
-      <p>
-        Student of React: {author.firstName} {author.lastName}
-      </p>
-      <small>Date: {date}</small>
-    </div>
-  </header>
-);
+const Button = () => <button style={buttonStyles}> action </button>;
 
-const numOne = 3;
-const numTwo = 2;
+// Hexadecimal Color Generator
+const hexaColor = () => {
+  let str = '0123456789abcdef';
+  let color = '';
+  for (let i = 0; i < 6; i++) {
+    let index = Math.floor(Math.random() * str.length);
+    color += str[index];
+  }
+  return '#' + color;
+};
 
-const result = (
-  <p>
-    {numOne} + {numTwo} = {numOne + numTwo}
-  </p>
-)
-
-const yearBorn = 1998;
-const currentYear = 2022;
-const age = currentYear - yearBorn;
-const personAge = (
-  <p>
-    {' '}
-    {author.firstName} {author.lastName} is {age} years old
-  </p>
-)
-
-// User Card Component - Implicit return
-const UserCard = () => (
-  <div className='user-card'>
-    <img src="https://drive.google.com/file/d/1ou4MaaVbTfNUWEiXvB_7ji_2EIMvySJ-/view?usp=sharing" alt="Photo of Joshua" />
-    <h2>{author.firstName} {author.lastName}</h2>
-  </div>
-)
-
-// TechList component
-const TechList = () => {
-  const techs = ['HTML', 'CSS', 'JavaScript'];
-  const techsFormated = techs.map((tech) => <li key={tech}> {tech} </li>)
-  return techsFormated;
-}
-
-// Main Component
-const Main = () => (
-  <main>
-    <div className="main-wrapper">
-      <p>Prerequisite to get started {' '}
-        <strong>
-          <em> react.js </em>
-        </strong>
-        :
-      </p>
-      <ul>
-        <TechList />
-      </ul>
-      <UserCard />
-    </div>
-  </main>
-)
-
-// Footer Component
-const Footer = () => (
-  <footer>
-    <div className="footer-wrapper">
-      <p>Copyright 2022</p>
-    </div>
-  </footer>
-)
+const HexaColor = () => <div>{hexaColor()}</div>;
 
 // The App, or the parent or the container component
 const App = () => (
   <div>
-    <Header />
-    <Main />
-    <Footer />
+    <Button />
+    <HexaColor />
+    {/* <Footer /> */}
   </div>
-)
+);
 
 const rootElement = document.getElementById('root');
 // we render the JSX element using the ReactDOM package
