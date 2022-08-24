@@ -22,15 +22,22 @@ const Header = (props) => {
 
 // The App function Component
 const App = () => {
+  const welcome = 'Welcome to Day 5 of 30 Days of React';
+  const title = 'Getting Started with React';
+  const subTitle = 'JavaScript Library';
+  const firstName = 'Joshua';
+  const lastName = 'Alhassan';
+  const date = 'Aug 24, 2022';
+
   return (
     <div className="app" >
       <Header 
-        welcome="Welcome to 30 Days of React"
-        title="Getting Started with React"
-        subtitle="JavaScript Library"
-        firstName="Joshua"
-        lastName="Alhassan"
-        date="Aug 24, 2022"
+        welcome={welcome}
+        title= {title}
+        subtitle={subTitle}
+        firstName={firstName}
+        lastName={lastName}
+        date={date}
       />
     </div>
   )
