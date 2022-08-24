@@ -24,11 +24,3 @@ const rootElement = document.getElementById('root');
 ReactDOM.render(<App />, rootElement);
 // or
 //  ReactDOM.render([header, main, footer], rootElement)
-
-// const root = createRoot(rootElement);
-
-// root.render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>
-// );
