@@ -3,37 +3,39 @@ import { createRoot } from 'react-dom/client';
 import ReactDOM from 'react-dom';
 import './style.css';
 
-// Button Component
-const buttonStyles = {
-  padding: '10px 20px',
-  background: 'rgb(0, 255, 0)',
-  border: 'none',
-  borderRadius: 5,
-};
+const Header = (props) => {
+  console.log(props)
+  return (
+    <header>
+      <div className='header-wrapper'>
+        <h1>{props.welcome}</h1>
+        <h2>{props.title}</h2>
+        <h3>{props.subtitle}</h3>
+        <p>
+          {props.firstName} {props.lastName}
+        </p>
+        <small>{props.date}</small>
+      </div>
+    </header>
+  )
+}
 
-const Button = () => <button style={buttonStyles}> action </button>;
+// The App function Component
+const App = () => {
+  return (
+    <div className="app" >
+      <Header 
+        welcome="Welcome to 30 Days of React"
+        title="Getting Started with React"
+        subtitle="JavaScript Library"
+        firstName="Joshua"
+        lastName="Alhassan"
+        date="Aug 24, 2022"
+      />
+    </div>
+  )
+}
 
-// Hexadecimal Color Generator
-const hexaColor = () => {
-  let str = '0123456789abcdef';
-  let color = '';
-  for (let i = 0; i < 6; i++) {
-    let index = Math.floor(Math.random() * str.length);
-    color += str[index];
-  }
-  return '#' + color;
-};
-
-const HexaColor = () => <div>{hexaColor()}</div>;
-
-// The App, or the parent or the container component
-const App = () => (
-  <div>
-    <Button />
-    <HexaColor />
-    {/* <Footer /> */}
-  </div>
-);
 
 const rootElement = document.getElementById('root');
 // we render the JSX element using the ReactDOM package
