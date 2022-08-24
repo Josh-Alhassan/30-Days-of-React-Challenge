@@ -29,13 +29,3 @@ const rootElement = document.getElementById('root');
 // we render the JSX element using the ReactDOM package
 // ReactDOM has the render method and the render method takes two argument
 ReactDOM.render(<App />, rootElement);
-// or
-//  ReactDOM.render([header, main, footer], rootElement)
-
-// const root = createRoot(rootElement);
-
-// root.render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>
-// );
